@@ -811,7 +811,7 @@ footer h2 {
 }
 
 
-@media(max-width: 900px){
+@media (max-width: 768px) {
 
     .section-title{
         font-size: 2.2rem;
@@ -826,27 +826,35 @@ footer h2 {
         margin-bottom: 35px;
     }
 
-    /* NOTE: this breakpoint (900px) covers tablets and narrow
-    laptop/browser windows too, not just phones. If you want the
-    hamburger menu to ONLY appear on true phone-width screens,
-    tell me and I can drop this down to something like 600px
-    instead. Leaving it at 900px for now since that's what you
-    had. */
-
     /* HERO */
     .home-content{
-        flex-direction: column-reverse;
-        text-align: center;
-    }
+       flex-direction: column-reverse;
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+       gap: 40px;
+   }
 
     .home-buttons{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+  }
 
     #home h2{
-        font-size: 3rem;
-    }
+      font-size: 2.6rem;
+  }
+  
+  #home h3{
+      font-size: 1.5rem;
+  }
+  
+  #home p{
+      max-width: 100%;
+      line-height: 1.8;
+  }
 
     /* ABOUT */
     .about-container{
@@ -891,16 +899,6 @@ footer h2 {
         grid-template-columns: 1fr;
     }
 
-    /* ==========================
-    MOBILE NAVIGATION
-    ========================== */
-
-    /* CORRECTED: removed a redundant "nav{ position:fixed; top:0;
-    left:0; width:100%; }" rule that used to sit here. Those exact
-    same values are already set on the base "nav" rule up top, so
-    repeating them inside this media query did nothing — it's
-    already fixed/full-width at every screen size. */
-
     /* SHOW HAMBURGER ONLY ON MOBILE */
     .menu-icon{
         display: block;
@@ -916,15 +914,11 @@ footer h2 {
         position: absolute;
         top: 100%;
         left: 0;
-
         width: 100%;
-
         background: #111c44;
-
         flex-direction: column;
         align-items: center;
         gap: 20px;
-
         padding: 20px 0;
     }
 
@@ -932,11 +926,40 @@ footer h2 {
     nav ul.active{
         display: flex;
     }
-
-/* CORRECTED: the file used to end with two stray markdown
-   code-fence markers (three backtick characters each) right
-   around this closing brace — leftover from a copy/paste, not
-   valid CSS. They've been removed. This single "}" below is the
-   real, correct closing brace for the @media block that started
-   above. */
+   /* HERO SOCIAL ICONS */
+   .social-icons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 30px;
+  }
+   
+   /* HERO STATS */
+   .hero-stats{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
+  }
+   
+   /* HERO IMAGE */
+   .home-image{
+       width: 100%;
+       display: flex;
+       justify-content: center;
+   }
+   
+   .home-image img{
+       width: 90%;
+       max-width: 350px;
+   }
+   
+   /* HOME TEXT */
+   .home-text{
+       width: 100%;
+   }
 }
