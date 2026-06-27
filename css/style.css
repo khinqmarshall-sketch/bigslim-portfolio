@@ -935,3 +935,89 @@ footer h2 {
        width: 100%;
    }
 }
+
+/* ==========================
+   LARGE TABLETS
+========================== */
+@media (max-width: 992px) {
+
+    section{
+        padding: 90px 8% 70px;
+    }
+
+    .home-content,
+    .about-container{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .skills-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
+
+    .social-icons{
+        justify-content: center;
+    }
+
+    .home-buttons{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-stats,
+    .about-stats{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* ==========================
+   SMALL PHONES
+========================== */
+
+@media (max-width:480px){
+
+    section{
+        padding:70px 5% 50px;
+    }
+
+    #home h2{
+        font-size:2rem;
+    }
+
+    #home h3{
+        font-size:1.3rem;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .home-buttons{
+        flex-direction:column;
+    }
+
+    .hero-stats,
+    .about-stats{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .stat-box,
+    .about-stat{
+        width:100%;
+        max-width:250px;
+    }
+
+    .social-icons{
+        gap:15px;
+    }
+
+}
