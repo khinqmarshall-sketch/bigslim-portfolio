@@ -101,12 +101,6 @@ nav ul li a.active {
     color: #3b82f6;
 }
 
-/* CORRECTED: this was already right, just clarifying it.
-   display: none here hides the hamburger icon on ALL screen
-   sizes by default (i.e. on desktop). It only gets switched to
-   display: block inside the @media(max-width: 900px) block
-   further down, so it only appears on narrower/phone screens.
-   No change needed here — leaving as-is. */
 .menu-icon {
     font-size: 2rem;
     color: white;
@@ -264,7 +258,7 @@ nav ul li a.active {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 80px;
+    gap: 70px;
 }
 
 .about-image{
@@ -273,11 +267,11 @@ nav ul li a.active {
 
 .about-image img{
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     border-radius: 20px;
     border: 2px solid #3b82f6;
-    box-shadow: 0 0 25px rgba(59,130,246,0.3);
-    transition: 0.4s ease;
+    box-shadow: 0 15px 40px rgba(59,130,246,0.25);
+    transition: all 0.4s ease;
 }
 
 .about-image img:hover{
@@ -289,11 +283,6 @@ nav ul li a.active {
     flex: 1;
 }
 
-.about-content h2{
-    font-size: 3.5rem;
-    margin-bottom: 15px;
-}
-
 .about-subtitle{
     color: #3b82f6;
     font-size: 1.1rem;
@@ -303,13 +292,8 @@ nav ul li a.active {
 
 .about-content h2{
     font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.about-content p{
-    color: #cbd5e1;
-    line-height: 1.9;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 /* ABOUT STATS */
@@ -330,8 +314,8 @@ nav ul li a.active {
 }
 
 .about-stat:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(59,130,246,0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(59,130,246,.35);
 }
 
 .about-stat h3{
@@ -455,12 +439,6 @@ nav ul li a.active {
     overflow: hidden;
     transition: 0.3s ease;
 }
-
-/* CORRECTED: "transform" was declared twice here. CSS only keeps
-   the LAST value for a duplicated property, so "scale(1.05)" was
-   silently overwriting "translateY(-10px)" and the lift effect
-   never actually ran. Combined both into one transform so the
-   card lifts AND scales up on hover. */
 .project-card:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 15px 35px rgba(59, 130, 246, 0.35);
@@ -766,8 +744,10 @@ footer h2 {
 }
 
 .about-content p{
-    font-size: 1.05rem;
+    color: #cbd5e1;
     line-height: 1.9;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
 }
 
 /* ==========================
@@ -778,26 +758,18 @@ footer h2 {
     position: fixed;
     right: 25px;
     bottom: 25px;
-
     width: 50px;
     height: 50px;
-
     background: #3b82f6;
     color: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 50%;
-
     font-size: 1.5rem;
-
     opacity: 0;
     visibility: hidden;
-
     transition: 0.3s ease;
-
     z-index: 999;
 }
 
@@ -875,14 +847,14 @@ footer h2 {
     }
 
     .about-stat{
-        background: #111c44;
-        padding: 25px;
-        border-radius: 15px;
-        text-align: center;
-        min-width: 130px;
-        transition: 0.3s ease;
-        border: 1px solid rgba(59,130,246,0.2);
-    }
+       background: #111c44;
+       padding: 22px;
+       border-radius: 16px;
+       text-align: center;
+       min-width: 130px;
+       border: 1px solid rgba(59,130,246,.15);
+       transition: all .35s ease;
+   }
 
     /* SKILLS */
     .skills-container{
