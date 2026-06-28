@@ -525,33 +525,47 @@
 
             <!-- CONTACT FORM MOVED OUTSIDE CONTACT-CONTAINER -->
 
-            <form class="contact-form">
+            <form id="contact-form" class="contact-form">
 
                 <input
                     type="text"
+                    id="name"
+                    name="name"
                     placeholder="Your Name"
                     required
                 >
-
+            
                 <input
                     type="email"
+                    id="email"
+                    name="email"
                     placeholder="Your Email"
                     required
                 >
-
+            
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="Subject"
+                    required
+                >
+            
                 <textarea
+                    id="message"
+                    name="message"
                     rows="6"
                     placeholder="Your Message"
                     required
                 ></textarea>
-
+            
                 <button
                     type="submit"
                     class="btn"
                 >
                     Send Message
                 </button>
-
+            
             </form>
 
         </section>
@@ -599,6 +613,9 @@
     <a href="#home" class="back-to-top">
         <i class='bx bx-up-arrow-alt'></i>
     </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/script.js"></script>
 
     <script src="js/script.js"></script>
 
