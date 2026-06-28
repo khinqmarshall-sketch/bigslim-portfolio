@@ -213,3 +213,51 @@ if (backToTop) {
     });
 
 }
+
+
+
+
+
+
+
+
+/* =====================================
+   EMAILJS CONTACT FORM
+===================================== */
+
+emailjs.init("9VS1F82jK75lOXzqZ");
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        emailjs.send("bigslim1", "template_60d9bic", {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            title: document.getElementById("title").value,
+            message: document.getElementById("message").value
+        })
+
+        .then(function () {
+
+            alert("✅ Your message has been sent successfully!");
+
+            contactForm.reset();
+
+        })
+
+        .catch(function (error) {
+
+            console.error(error);
+
+            alert("❌ Failed to send message. Please try again.");
+
+        });
+
+    });
+
+}
