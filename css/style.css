@@ -1,0 +1,941 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   RESET
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+}
+
+section{
+    padding: 170px 10% 120px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================
+   SECTION TITLES
+========================== */
+
+.section-title{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.projects-subtitle,
+.contact-subtitle,
+.cta-text{
+    text-align: center;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+    background: rgba(4, 15, 52, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    transition: 0.3s ease;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3b82f6;
+}
+
+nav h1 {
+    color: #3b82f6;
+}
+
+nav ul li a.active {
+    color: #3b82f6;
+}
+
+/* CORRECTED: this was already right, just clarifying it.
+   display: none here hides the hamburger icon on ALL screen
+   sizes by default (i.e. on desktop). It only gets switched to
+   display: block inside the @media(max-width: 900px) block
+   further down, so it only appears on narrower/phone screens.
+   No change needed here — leaving as-is. */
+.menu-icon {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    /* Hidden on desktop */
+}
+
+/* ==========================
+   HERO STATS
+========================== */
+
+.hero-stats {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.stat-box {
+    background: #111c44;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 110px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    color: #3b82f6;
+    font-size: 1.8rem;
+}
+
+.stat-box p {
+    color: #cbd5e1;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+#home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#home h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+#home h3 {
+    font-size: 2rem;
+    color: #3b82f6;
+    margin: 15px 0;
+}
+
+#typing-text {
+    min-height: 50px;
+}
+
+#typing-text::after {
+    content: "|";
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#home p {
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* ==========================
+   HERO LAYOUT
+========================== */
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.home-image {
+    flex: 1;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 20px;
+    border: 3px solid #3b82f6;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
+    transition: 0.4s ease;
+}
+
+.home-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #3b82f6;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+#about{
+    padding-top: 180px;
+}
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.about-image{
+    flex: 1;
+}
+
+.about-image img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 2px solid #3b82f6;
+    box-shadow: 0 0 25px rgba(59,130,246,0.3);
+    transition: 0.4s ease;
+}
+
+.about-image img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(59,130,246,0.45);
+}
+
+.about-content{
+    flex: 1;
+}
+
+.about-content h2{
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.about-subtitle{
+    color: #3b82f6;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.about-content h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-content p{
+    color: #cbd5e1;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* ABOUT STATS */
+
+.about-stats{
+    display: flex;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.about-stat{
+    background: #111c44;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 120px;
+    transition: 0.3s ease;
+}
+
+.about-stat:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(59,130,246,0.3);
+}
+
+.about-stat h3{
+    color: #3b82f6;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.about-stat p{
+    color: #cbd5e1;
+    margin: 0;
+}
+
+/* ==========================
+   SKILLS SECTION
+========================== */
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.skill-card{
+    background: #111c44;
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.skill-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(59,130,246,0.25);
+}
+
+.skill-card i{
+    font-size: 3rem;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+.skill-card h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+.skill-card span{
+    color: #3b82f6;
+    font-size: 1rem;
+}
+
+.skill-card p{
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   PROGRESS BAR
+========================== */
+
+.skill-progress{
+    width: 100%;
+    height: 10px;
+    background: #0f172a;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar{
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 20px;
+    animation: fillBar 2s ease;
+}
+
+@keyframes fillBar{
+    from{
+        width: 0;
+    }
+}
+
+/* Skill Levels */
+
+.progress-bar.html{
+    width: 95%;
+}
+
+.progress-bar.css{
+    width: 90%;
+}
+
+.progress-bar.javascript{
+    width: 75%;
+}
+
+.progress-bar.responsive{
+    width: 90%;
+}
+
+.progress-bar.github{
+    width: 70%;
+}
+
+/* ==========================
+   PROJECTS SECTION
+========================== */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #111c44;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+/* CORRECTED: "transform" was declared twice here. CSS only keeps
+   the LAST value for a duplicated property, so "scale(1.05)" was
+   silently overwriting "translateY(-10px)" and the lift effect
+   never actually ran. Combined both into one transform so the
+   card lifts AND scales up on hover. */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.35);
+}
+
+.project-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img{
+    transform: scale(1.08);
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #3b82f6;
+}
+
+.project-content p {
+    margin-bottom: 20px;
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.tech-stack {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.project-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.project-links{
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.projects-subtitle{
+    text-align: center;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: -20px auto 50px;
+}
+
+/* ==========================
+   CONTACT SECTION
+========================== */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: #111c44;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.contact-card h3 {
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #cbd5e1;
+}
+
+.contact-card i {
+    font-size: 3rem;
+    color: #3b82f6;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.contact-card:hover i {
+    transform: scale(1.15);
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.35);
+}
+
+.contact-card a {
+    color: white;
+}
+
+.contact-card a:hover {
+    color: #3b82f6;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: #cbd5e1;
+    margin-top: -25px;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    background: #111c44;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.contact-form textarea {
+    resize: none;
+    min-height: 180px;
+}
+
+.contact-form .btn {
+    align-self: center;
+    border: none;
+    cursor: pointer;
+}
+
+/* ==========================
+   SOCIAL ICONS
+========================== */
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    width: 50px;
+    height: 50px;
+    background: #111c44;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons i {
+    font-size: 1.7rem;
+    color: #3b82f6;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    text-align: center;
+    padding: 50px 10%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer h2 {
+    color: #3b82f6;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+.footer-text {
+    color: #cbd5e1;
+    margin-bottom: 12px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    margin-bottom: 25px;
+}
+
+.footer-socials a {
+    width: 45px;
+    height: 45px;
+    background: #111c44;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.footer-socials i {
+    color: #3b82f6;
+    font-size: 1.5rem;
+}
+
+.copyright {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-subtext {
+    color: #94a3b8;
+    margin-top: 0;
+    font-size: 0.95rem;
+}
+
+/* ==========================
+   SCROLL PROGRESS BAR
+========================== */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: #3b82f6;
+    z-index: 9999;
+}
+
+#cta {
+    text-align: center;
+}
+
+#cta .btn {
+    margin-top: 30px;
+}
+
+.about-subtitle{
+    color: #3b82f6;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.about-content h2{
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.about-content p{
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+/* ==========================
+   BACK TO TOP BUTTON
+========================== */
+
+.back-to-top{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    background: #3b82f6;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s ease;
+
+    z-index: 999;
+}
+
+.back-to-top:hover{
+    transform: translateY(-5px);
+}
+
+.show-btn{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media(max-width: 900px){
+
+    .section-title{
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    .projects-subtitle,
+    .contact-subtitle,
+    .cta-text{
+        font-size: 0.95rem;
+        line-height: 1.8;
+        margin-bottom: 35px;
+    }
+
+    /* NOTE: this breakpoint (900px) covers tablets and narrow
+    laptop/browser windows too, not just phones. If you want the
+    hamburger menu to ONLY appear on true phone-width screens,
+    tell me and I can drop this down to something like 600px
+    instead. Leaving it at 900px for now since that's what you
+    had. */
+
+    /* HERO */
+    .home-content{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-buttons{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home h2{
+        font-size: 3rem;
+    }
+
+    /* ABOUT */
+    .about-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img{
+        max-width: 100%;
+    }
+
+    .about-stats{
+        display:flex;
+        gap:20px;
+        margin-top:30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-stat{
+        background: #111c44;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        min-width: 130px;
+        transition: 0.3s ease;
+        border: 1px solid rgba(59,130,246,0.2);
+    }
+
+    /* SKILLS */
+    .skills-container{
+        grid-template-columns: 1fr;
+    }
+
+    /* PROJECTS */
+    .projects-container{
+        grid-template-columns: 1fr;
+    }
+
+    /* CONTACT */
+    .contact-container{
+        grid-template-columns: 1fr;
+    }
+
+    /* ==========================
+    MOBILE NAVIGATION
+    ========================== */
+
+    /* CORRECTED: removed a redundant "nav{ position:fixed; top:0;
+    left:0; width:100%; }" rule that used to sit here. Those exact
+    same values are already set on the base "nav" rule up top, so
+    repeating them inside this media query did nothing — it's
+    already fixed/full-width at every screen size. */
+
+    /* SHOW HAMBURGER ONLY ON MOBILE */
+    .menu-icon{
+        display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* HIDE MENU BY DEFAULT */
+    nav ul{
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: #111c44;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        padding: 20px 0;
+    }
+
+    /* SHOW MENU WHEN ACTIVE */
+    nav ul.active{
+        display: flex;
+    }
+
+/* CORRECTED: the file used to end with two stray markdown
+   code-fence markers (three backtick characters each) right
+   around this closing brace — leftover from a copy/paste, not
+   valid CSS. They've been removed. This single "}" below is the
+   real, correct closing brace for the @media block that started
+   above. */
+}
