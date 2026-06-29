@@ -145,10 +145,11 @@ nav ul li a.active {
    HERO SECTION
 ========================== */
 
-#home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+#home{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding-top:120px;
 }
 
 #home h2 {
@@ -835,8 +836,8 @@ footer h2 {
 @media (max-width:992px){
 
     section{
-        padding:90px 8% 70px;
-    }
+       padding:120px 8% 80px;
+   }
 
     .home-content,
     .about-container{
