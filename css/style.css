@@ -186,6 +186,52 @@ nav ul li a.active {
    HERO LAYOUT
 ========================== */
 
+/* ==========================
+   HERO TEXT IMPROVEMENT
+========================== */
+
+.hero-intro{
+    color:#94a3b8;
+    font-size:1.1rem;
+    font-weight:500;
+    margin-bottom:12px;
+    letter-spacing:1px;
+}
+
+.gradient-text{
+
+    background:linear-gradient(
+        90deg,
+        #3b82f6,
+        #60a5fa,
+        #93c5fd
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+    font-size:4.5rem;
+    font-weight:700;
+    line-height:1.1;
+
+}
+
+.hero-description{
+
+    color:#cbd5e1;
+
+    font-size:1.05rem;
+
+    line-height:2;
+
+    max-width:620px;
+
+    margin-top:20px;
+
+}
+
 .home-content {
     display: flex;
     align-items: center;
@@ -884,8 +930,18 @@ footer h2 {
     }
 
     #home h3{
-        font-size:1.5rem;
-    }
+
+       font-size:2rem;
+   
+       font-weight:600;
+   
+       color:#60a5fa;
+   
+       margin:18px 0;
+   
+       min-height:55px;
+   
+   }
 
     #home p{
         max-width:100%;
