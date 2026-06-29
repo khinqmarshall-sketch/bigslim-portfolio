@@ -293,6 +293,49 @@ nav ul li a.active {
     box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
 }
 
+/* ===========================
+   PREMIUM HERO BUTTONS
+=========================== */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.btn{
+
+    transition:.35s ease;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(59,130,246,.35);
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    color:#4f9cff;
+
+    border:2px solid #4f9cff;
+
+}
+
+.btn-outline:hover{
+
+    background:#4f9cff;
+
+    color:#fff;
+
+}
+
 /* ==========================
    ABOUT SECTION
 ========================== */
